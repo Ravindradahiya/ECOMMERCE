@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+  <definition name="baseLayout" template="/WEB-INF/view/template/baseLayout.jsp">
+     <put-attribute name="title"  value="HOME"/>
+     <put-attribute name="header" value="/WEB-INF/view/template/header.jsp"/>
+     <put-attribute name="menu"   value="/WEB-INF/view/template/menu.jsp"/>
+     <put-attribute name="body"   value="/WEB-INF/view/template/body.jsp"/>
+     <put-attribute name="footer"   value="/WEB-INF/view/template/footer.jsp"/>
+ </definition>
+  
+<definition name="baseLayoutProducts" template="/WEB-INF/view/template/baseLayoutProduct.jsp">
+     <put-attribute name="title"  value="HOME"/>
+     <put-attribute name="header" value="/WEB-INF/view/template/header.jsp"/>
+     <put-attribute name="menu"   value="/WEB-INF/view/template/menu.jsp"/>
+     <put-attribute name="leftbody"   value="/WEB-INF/view/template/leftbody.jsp"/>
+     <put-attribute name="body"   value="/WEB-INF/view/template/body.jsp"/>
+     <put-attribute name="footer"   value="/WEB-INF/view/template/footer.jsp"/>
+ </definition>
+
+<definition name="baseLayoutBlank" template="/WEB-INF/view/template/baseLayoutProduct.jsp">
+     <put-attribute name="title"  value="HOME"/>
+     <put-attribute name="body"   value="/WEB-INF/view/template/body.jsp"/>
+ </definition>
+
+  <definition name="reveurs_products" extends="baseLayoutBlank">
+      <put-attribute name="title"  value=" : Product View"/>
+      <put-attribute name="body"   value="/WEB-INF/view/products_left.jsp"/>      
+  </definition>
+
+
+  <definition name="reveurs_products12" extends="baseLayoutProducts">
+      <put-attribute name="title"  value=" : Product View"/>
+      <put-attribute name="leftbody"   value="/WEB-INF/view/products_left.jsp"/>      
+      <put-attribute name="body"   value="/WEB-INF/view/reveurs_products.jsp"/>      
+  </definition>
+
+  <definition name="home" extends="baseLayout">
+      <put-attribute name="title"  value=" : Home"/>
+      <put-attribute name="body"   value="/WEB-INF/view/home.jsp"/>      
+  </definition>
+  
+  <definition name="setHomePage" extends="baseLayout">
+      <put-attribute name="title"  value=" : Set Home Page"/>
+      <put-attribute name="body"   value="/WEB-INF/view/set_home_page.jsp"/>      
+  </definition>
+  
+  
+  <!--                    Product Information           -->
+  <definition name="add_product" extends="baseLayout">
+      <put-attribute name="title"  value=" : Add Product"/>
+      <put-attribute name="body"   value="/WEB-INF/view/add_product.jsp"/>      
+  </definition>
+
+  <definition name="add_sub_product" extends="baseLayout">
+      <put-attribute name="title"  value=" : Add Sub Product"/>
+      <put-attribute name="body"   value="/WEB-INF/view/add_sub_product.jsp"/>      
+  </definition>
+
+  <definition name="product" extends="baseLayout">
+      <put-attribute name="title"  value=" : Product"/>
+      <put-attribute name="body"   value="/WEB-INF/view/product.jsp"/>      
+  </definition>
+
+  <definition name="product_info" extends="baseLayout">
+      <put-attribute name="title"  value=" : Product Info"/>
+      <put-attribute name="body"   value="/WEB-INF/view/product_info.jsp"/>      
+  </definition>
+
+
+  <!--                    Category Information           -->
+  
+  <definition name="add_category" extends="baseLayout">
+      <put-attribute name="title"  value=" : Add Category"/>
+      <put-attribute name="body"   value="/WEB-INF/view/add_category.jsp"/>      
+  </definition>
+
+  <definition name="add_sub_category" extends="baseLayout">
+      <put-attribute name="title"  value=" : Add Sub Category"/>
+      <put-attribute name="body"   value="/WEB-INF/view/add_sub_category.jsp"/>      
+  </definition>
+
+  <definition name="category" extends="baseLayout">
+      <put-attribute name="title"  value=" : Category"/>
+      <put-attribute name="body"   value="/WEB-INF/view/category.jsp"/>      
+  </definition>
+
+  <definition name="category_info" extends="baseLayout">
+      <put-attribute name="title"  value=" : Category Info"/>
+      <put-attribute name="body"   value="/WEB-INF/view/category_info.jsp"/>      
+  </definition>
+
+
+</tiles-definitions>
